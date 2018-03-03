@@ -1,0 +1,62 @@
+.board {
+  width: 350px;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 100px;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: sans-serif;
+
+}
+
+h1 {
+  margin-top: 65px;
+  background-color: black;
+  color: white;
+  text-align: center;
+    font-family: sans-serif;
+}
+.square {
+  height: 50px;
+  width: 50px;
+  border:2px solid black;
+  /* border-style:groove; */
+  background-color: white;
+
+  flex-grow: 1;
+}
+
+.X {
+  text-align: center;
+  height: 50px;
+  width: 50px;
+
+  background-color: white;
+  flex-grow: 1;
+  vertical-align: middle;
+  font-size: 55px;
+  font-weight: bold;
+  line-height: 50px;
+  margin-right: auto;
+  margin-left: auto;
+  overflow: hidden;
+  padding: 0;
+}
+
+.O {
+  text-align: center;
+  height: 50px;
+  width: 50px;
+  margin-right: auto;
+  margin-left: auto;
+  background-color: white;
+  color: rgb(97, 107, 111);
+
+  flex-grow: 1;
+  vertical-align: middle;
+  font-size: 55px;
+  font-weight: bolder;
+  line-height: 50px;
+  overflow: hidden;
+  padding: 0;
+}
