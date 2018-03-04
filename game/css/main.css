@@ -1,36 +1,47 @@
+body {
+background-color: rgb(236, 200, 54);
+}
+
 .board {
   width: 350px;
   display: flex;
   flex-wrap: wrap;
-  margin-top: 100px;
+  margin-top: 50px;
   margin-left: auto;
   margin-right: auto;
   font-family: sans-serif;
+  border-style: 5px inset;
+
 
 }
 
-h1 {
+#h1 {
   margin-top: 65px;
-  background-color: black;
-  color: white;
+
+  color: ivory;
   text-align: center;
-    font-family: sans-serif;
+font-family: 'Fredoka One';
+font-size: 40px;
+text-shadow: -3px 0 black, 0 3px black, 3px 0 black, 0 -3px black;
+/* 0 5px black, 5px 0 black, 0 -5px black; */
+
 }
 .square {
   height: 50px;
   width: 50px;
+  border-radius: 25px;
   border:2px solid black;
-  /* border-style:groove; */
+  border-style:groove;
   background-color: white;
 
   flex-grow: 1;
-}
+ }
 
 .X {
   text-align: center;
   height: 50px;
   width: 50px;
-
+  border-radius: 25px;
   background-color: white;
   flex-grow: 1;
   vertical-align: middle;
@@ -51,7 +62,7 @@ h1 {
   margin-left: auto;
   background-color: white;
   color: rgb(97, 107, 111);
-
+  border-radius: 25px;
   flex-grow: 1;
   vertical-align: middle;
   font-size: 55px;
