@@ -73,22 +73,24 @@ text-shadow: -3px 0 black, 0 3px black, 3px 0 black, 0 -3px black;
   padding: 0;
 }
 
-.playedOdd {
+.Odd {
   height: 70px;
   width: 70px;
   border-radius: 45px;
   border:2px solid black;
   border-style:groove;
   background-color: white;
+  line-height: 70px;
   flex-grow: 1;
 }
 
-.playedEven{
+.Even{
   height: 70px;
   width: 70px;
   border-radius: 45px;
   border:2px solid black;
   border-style:groove;
   background-color: white;
+  line-height: 70px;
   flex-grow: 1;
 }
