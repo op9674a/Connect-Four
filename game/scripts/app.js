@@ -1,28 +1,18 @@
 //make board
 //make token 1
 //make token 2
-
-const spots = [
-  // [],
-  // [],
-  // [],
-  // [],
-  // [],
-  // [],
-  // [],
-  // [],
-];
-
-//check if is array since console will only return as object, this took forever to figure out though Im sure it was mentioned in class. cool.
-console.log(typeof spots);
-const isSpotsArr = $.isArray(spots);
-console.log(isSpotsArr);
+//make array of squares
+//check if is array since console will only return as object.
+//access individual squares
+//make array of played squares?
+//check if played squares = win...somehow
+const $squareArr=[];
 
 $(() => {
 
   let clicks = 0;
 
-  const changeIcon = (event) => {
+  const placeIcon = (event) => {
 
     clicks ++;
 
@@ -44,53 +34,23 @@ $(() => {
     }
 
 };
-
-// const $boardArr = [];
-
-  const $board = $("<div>").addClass("board");
-  $("body").append($board);
-  // $boardArr.push($board);
-  console.log(typeof $board);
-  // console.log($("div"));
-  // console.log($("div").eq(2).eq(0));
-  // console.log(typeof $("div").eq(2).eq(0));
-  // const isBoardArr = $.isArray($boardArr);
-  // console.log(isBoardArr);
-  // console.log($boardArr);
-  // console.log($boardArr[0]);
-  // console.log(($boardArr[0][0]));
+const $board = $("<div>").addClass("board");
+$("body").append($board);
 
 
     for (let i = 0; i <42; i++){
-    const $square = $("<div>")
-    $square.attr("id",  1+i);
+    const $square = $("<div>");
+    $square.attr("id", 0+i);
     $square.addClass("square");
     $board.append($square);
-    console.log(typeof $square);
 
-  // const $squareArr = [];
-  // $squareArr.push($square);
-  // const isSquareArr = $.isArray($squareArr);
-  // console.log(isSquareArr);
-  // console.log($squareArr);
-  // console.log($squareArr[0]);
-  // console.log($squareArr[0][1]);
+    const $makeSquareArr = $squareArr.push($square);
+    // console.log(typeof $squareArr);
+    // const isSquareArr = $.isArray($squareArr);
+    // console.log(isSquareArr)
 
-
-
-
-
-
-    //
-    // $boardArr.push($square);
-    // console.log($boardArr);
-    // console.log(typeof $square);
-    // const isArr = $.isArray($boardArr);
-    // console.log(isArr);
-
-
-
-
-    $square.one("click", changeIcon);
-  }
+  $square.one("click", placeIcon);
+};
+  console.log($squareArr[0]);
+  console.log($squareArr[1]);
 });
