@@ -1,7 +1,11 @@
 body {
-background-color: rgb(236, 200, 54);
+/* background-color: rgb(236, 200, 54); */
+background-image: url(https://cdn.shopify.com/s/files/1/0301/0501/products/charlie-brown-zig-zag-t-shirt-textual-tees.png?v=1513122104);
+background-repeat: no-repeat;
+background-attachment: fixed;
+background-position: center;
+background-size: cover;
 }
-
 
 .board {
   width: 350px;
@@ -19,11 +23,20 @@ margin-top: 65px;
 color: ivory;
 text-align: center;
 font-family: 'Fredoka One';
-font-size: 40px;
+font-size: 35px;
 text-shadow: -3px 0 black, 0 3px black, 3px 0 black, 0 -3px black;
 /* 0 5px black, 5px 0 black, 0 -5px black; */
-
 }
+
+#p {
+  color: ivory;
+  text-align: center;
+  font-family: 'Fredoka One';
+  font-size: 30px;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+
 .square {
   height: 50px;
   width: 50px;
@@ -37,6 +50,8 @@ text-shadow: -3px 0 black, 0 3px black, 3px 0 black, 0 -3px black;
 
 
 .X {
+  background-image: url(http://icons.iconarchive.com/icons/pino/peanuts/32/Charly-Brown-3-icon.png);
+  background-size: contain;
   text-align: center;
   height: 50px;
   width: 50px;
@@ -54,6 +69,8 @@ text-shadow: -3px 0 black, 0 3px black, 3px 0 black, 0 -3px black;
 }
 
 .O {
+  background-image: url(http://icons.iconarchive.com/icons/pino/peanuts/32/Snoopy-2-icon.png);
+  background-size: contain;
   text-align: center;
   height: 50px;
   width: 50px;
@@ -61,7 +78,7 @@ text-shadow: -3px 0 black, 0 3px black, 3px 0 black, 0 -3px black;
   margin-left: auto;
   background-color: white;
   color: rgb(97, 107, 111);
-  border-radius: 25px;
+  border-radius: 26px;
   flex-grow: 1;
   vertical-align: middle;
   font-size: 55px;
