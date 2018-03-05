@@ -5,6 +5,7 @@
 //////have columns, have rows
 //make array of played squares?
 //check if played squares = win...somehow
+//check for win after each click
 // horizontal
 // vertical
 // diagonal
@@ -29,54 +30,48 @@ let clicks = 0;
 
     clicks ++;
 
-      const $icon1 = $("<div>");
-      $icon1.addClass("X").text("X");
+    const $icon1 = $("<div>");
+    $icon1.addClass("X").text("X");
       // console.log($icon1);
 
-      const $icon2 = $("<div>");
-      $icon2.addClass("O").text("O");
+    const $icon2 = $("<div>");
+    $icon2.addClass("O").text("O");
       // console.log($icon2);
 
-        // if ($(event.currentTarget) !== available spot {
+        // if ($(event.currentTarget) !== lowest available spot {
         //   place Token on lowest available spot
         // }
 
-      if (clicks %2 !== 0) {
-        $(event.currentTarget).empty();
-        $(event.currentTarget).append($icon1);
-        $(event.currentTarget).removeClass().addClass("Odd");
+    if (clicks %2 !== 0) {
+    $(event.currentTarget).empty();
+    $(event.currentTarget).append($icon1);
+    $(event.currentTarget).removeClass().addClass("Odd");
 
+    const $playedOdd = [];
+    const $trackPlayedOdd = $playedOdd.push($(event.currentTarget).hasClass("Odd"));
+    console.log($playedOdd + "odd");
+    }
+    else if (clicks %2 === 0){
+    $(event.currentTarget).empty();
+    $(event.currentTarget).append($icon2);
+    $(event.currentTarget).removeClass().addClass("Even");
 
-
-        const $playedOdd = [];
-        const $trackPlayedOdd = $playedOdd.push($(event.currentTarget).hasClass("Odd"));
-        console.log($playedOdd + "odd");
-      }
-        else if (clicks %2 === 0){
-        $(event.currentTarget).empty();
-        $(event.currentTarget).append($icon2);
-        $(event.currentTarget).removeClass().addClass("Even");
-
-        const $playedEven = [];
-        const $trackPlayedEven = $playedEven.push($(event.currentTarget).hasClass("Even"));
-        console.log($playedEven + "even");
-      }
-    };
+    const $playedEven = [];
+    const $trackPlayedEven = $playedEven.push($(event.currentTarget).hasClass("Even"));
+    console.log($playedEven + "even");
+    }
+  };
 
     const $board = $("<div>").addClass("board");
     $("body").append($board);
 
+    for (let i = 0; i <42; i++){
+    const $square = $("<div>");
+    $square.attr("id", 0+i);
+    $square.addClass("square");
+    $board.append($square);
+    $("body").append($board);
 
-      for (let i = 0; i <42; i++){
-      const $square = $("<div>");
-      $square.attr("id", 0+i);
-      $square.addClass("square");
-      $board.append($square);
-
-      const $makeSquareArr = $squareArr.push($square);
-
-      $square.one("click", placeIcon);
-
-  };
-
-  });
+    $square.one("click", placeIcon);
+};
+});
