@@ -45,9 +45,11 @@ text-shadow: -3px 0 black, 0 3px black, 3px 0 black, 0 -3px black;
   border-style:groove;
   background-color: white;
   flex-grow: 1;
+  transition: all .1s ease-in-out;
  }
 
-
+ .square:hover {transform: scale(1.1);
+}
 
 .X{
   background-image: url(http://icons.iconarchive.com/icons/pino/peanuts/32/Charly-Brown-3-icon.png);

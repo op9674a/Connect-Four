@@ -1,108 +1,170 @@
 
 const $squareArr=[];
 
-
-
 $(() => {
-const check = () => {
-  console.log("check");
-  console.log($(event.currentTarget).hasClass(".Odd"));
-  console.log($(event.currentTarget).attr("id"));
+//check class, id and value of chosen spot
+const $oddArr = [];
+const $evenArr = [];
+  const checkColumn = () => {
+//determine adjacent
+//determine if 4
+// if four adjacent spots have the same class announce win
+//if difference in number values between each spot is 6, announce win
+//get integer value of selected spot
+console.log($(event.currentTarget));
+const $oddInt = parseInt($(event.currentTarget).attr("id"));
+console.log($(event.currentTarget).hasClass("Odd"));
+// console.log($("<div>"));
+console.log(parseInt($(event.currentTarget).attr("id")));
+//get integer value of top adjacent
+console.log(($(event.currentTarget).attr("id")) - 6);
+console.log(parseInt($(event.currentTarget).attr("id")) - 6);
+//get integer value of bottom adjacent
+console.log(parseInt($(event.currentTarget).attr("id")) + 6);
+//two top adjacent
+console.log(parseInt($(event.currentTarget).attr("id")) - 12);
+//two bottom adjacent
+console.log(parseInt($(event.currentTarget).attr("id")) + 12);
+//three top adjacent
+console.log(parseInt($(event.currentTarget).attr("id")) - 18);
+//three bottom adjacent
+console.log(parseInt($(event.currentTarget).attr("id")) + 18);
+//
+$oddArr.push($oddInt);
+console.log($oddArr);
 
+for (let i=0; i < $oddArr.length; i++){
+  console.log($oddArr[0], $oddArr[1], $oddArr[2]);
 
-      console.log(parseInt($(event.currentTarget).attr("id")));
-      console.log(parseInt($(event.currentTarget).attr("id")) + 1);
-      console.log($("<div>"));
-      
-// if (parseInt($(event.currentTarget).attr("id").hasClass(".Odd") && parseInt($(event.currentTarget).attr("id")) + 1)).hasClass(".Odd")
-
-  // console.log($(event.currentTarget).attr("id"));
-  console.log($("#36").hasClass("Odd"));
-//   if ($(event.currentTarget).attr("id")) && $(event.currentTarget).attr("id") + 1){
-//   console.log("equal");
-// }
-};
-
-
-  const $playedOdd = [];
-  const $playedEven = [];
-
-const columnWin = () => {
-  console.log($playedOdd);
-  let sum = 0;
-  for (let i = 0; i < $playedOdd.length; i++){
-    console.log("columnwin is working")
-    console.log(sum += $playedOdd[i]);
+  if($oddArr[0] - 6 === $oddArr[1] && $oddArr[1] - 6 === $oddArr[2] && $oddArr[2] -6 === $oddArr[3]){
+    console.log("yes");
   }
-  return sum;
-  console.log(sum);
+}
+
+
+
+// console.log($oddInt);
+// console.log($oddInt[0]);
+// console.log($oddInt[0]-6);
+// console.log($oddInt[1]);
+// console.log($oddInt[0] && $oddInt[1]);
+//
+
+// rowCheck
+//get integer value of selected spot
+// console.log(parseInt($(event.currentTarget).attr("id")));
+// //get integer value of right adjacent
+// console.log(parseInt($(event.currentTarget).attr("id")) + 1);
+// //get integer value of left adjacent
+// console.log(parseInt($(event.currentTarget).attr("id")) - 1);
+// //integer value of right two adjacent
+// console.log(parseInt($(event.currentTarget).attr("id")) + 2);
+// //left two adjacent
+// console.log(parseInt($(event.currentTarget).attr("id")) - 2);
+// //three right adjacent
+// console.log(parseInt($(event.currentTarget).attr("id")) + 3);
+// // three left adjacent
+// console.log(parseInt($(event.currentTarget).attr("id")) - 3);
+//
+//   if ($(event.currentTarget).attr("id") && ($(event.currentTarget).attr("id") + 1)){
+//     console.log("yes clicked spot and next spot are being compared");
+//   }
+//
+//   //compare adjacent elements
+//
+//
+//
+//   console.log($("<div>"));
+//   console.log($("<div>").attr("id"));
+//   console.log(parseInt($("<div>").attr("id")));
+//   parseInt($("<div>").attr("id"));
+//if two adjacent elements are equal, compare more
+//if four adjacent elements are equal, announce win
+
+
 };
-// for (let i = 0; i < 4; i)
+
+
+
+// const columnWin = () => {
+//   console.log($playedOdd);
+//   for (let i = 0; i < $playedOdd.length; i++){
+//     console.log("columnwin is working")
+//   }
+//
+// };
+
     // console.log(i);
     // console.log($playedOdd);
     // console.log($playedOdd[0]);
     // console.log($playedOdd);
     // console.log(($playedOdd).attr("id"));
 
+  let clicks = 0;
 
+  const placeIcon = (event) => {
+    console.log("place icon is working");
 
-  // if {
-  //       every difference between i value is 6, alert win
-  //     }
+    clicks ++;
 
-let clicks = 0;
+    const $icon1 = $("<div>");
+    $icon1.addClass("X");
 
-const placeIcon = (event) => {
-console.log("place icon is working");
+    const $icon2 = $("<div>");
+    $icon2.addClass("O");
 
-  clicks ++;
-
-  const $icon1 = $("<div>");
-  $icon1.addClass("X");
-
-  const $icon2 = $("<div>");
-  $icon2.addClass("O");
-
-  if (clicks %2 !== 0) {
-      //get column
-      //loop through
-      // const $columnName = $(event.target).attr("class").replace("column", "")
+    if (clicks %2 !== 0) {
+      console.log($(event.currentTarget));
       $(event.currentTarget).empty();
       $(event.currentTarget).append($icon1);
       $(event.currentTarget).addClass("Odd");
 
+      const $clickedOdd = $(event.currentTarget).attr("id");
+      console.log($(event.currentTarget));
+      console.log("clicked square num " + $clickedOdd);
 
-      let $trackPlayedOdd = $(event.currentTarget).attr("id");
-      console.log($trackPlayedOdd);
-      $playedOdd.push($trackPlayedOdd);
-      console.log($playedOdd);
-      columnWin();
-  }
-  else if (clicks %2 === 0) {
+
+      checkColumn();
+      // checkRow();
+
+    }
+
+    else if (clicks %2 === 0) {
        $(event.currentTarget).empty();
        $(event.currentTarget).append($icon2);
        $(event.currentTarget).addClass("Even");
-       // checkWin();
-       let $trackPlayedEven = $(event.currentTarget).attr("id");
-       console.log($trackPlayedEven);
-       $playedEven.push($trackPlayedEven);
-       console.log($playedEven);
+
+       const $clickedEven = $(event.currentTarget).attr("id");
+       console.log("clicked square num " + $clickedEven);
+       $evenArr.push($clickedEven);
+       console.log("square num " + $clickedEven + " in evenArr");
+
+       // checkColumn();
+       // checkRow();
      }
 
-  columnWin();
-check();
-}
+   };
       const $board = $("<div>").addClass("board");
       $("body").append($board);
+      console.log($board);
 
       for (let i = 0; i <42; i++){
         const $square = $("<div>");
         $square.attr("id", i);
-        $square.addClass("column" + i%6).addClass("square");
+        $square.addClass("square");
         $board.append($square);
+
+
+        $square.one("click", placeIcon);
+
+
+        const makeSquareArr = () => {
+          $squareArr.push($square);
+        }
+
       };
 
-$(".square").one("click", placeIcon);
+
 
 });
 //
