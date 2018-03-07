@@ -1,6 +1,4 @@
 
-const $squareArr=[];
-
 $(() => {
 //check class, id and value of chosen spot
 const $oddArr = [];
@@ -33,13 +31,31 @@ console.log(parseInt($(event.currentTarget).attr("id")) + 18);
 $oddArr.push($oddInt);
 console.log($oddArr);
 
-for (let i=0; i < $oddArr.length; i++){
-  console.log($oddArr[0], $oddArr[1], $oddArr[2]);
-
-  if($oddArr[0] - 6 === $oddArr[1] && $oddArr[1] - 6 === $oddArr[2] && $oddArr[2] -6 === $oddArr[3]){
-    console.log("yes");
-  }
+const fourClicks = () => {
+for (let i=0; i <$oddArr.length; i++){
+// //   console.log($oddArr[0], $oddArr[1], $oddArr[2]);
+// console.log($oddArr[i] ++);
+console.log(i);
+if (i > 0 && i%3===0){
+  console.log("user clicked 4 times");
 }
+}
+};
+
+fourClicks();
+  // if($oddArr[i] - 6 === $oddArr[i] +=1 && $oddArr[i] - 6 === $oddArr[i] && $oddArr[i] -6 === $oddArr[i]){
+  //   console.log("win");
+  // }
+  // else if ($oddArr[1] - 6 === $oddArr[2] && $oddArr[2] - 6 === $oddArr[3] && $oddArr[3] - 6 === $oddArr[4]){
+  //   console.log("win");
+  // }
+  // else if ($oddArr[2] - 6 === $oddArr[3] && $oddArr[3] - 6 === $oddArr[4] && $oddArr[4] - 6 === $oddArr[5]){
+  //   console.log("win");
+  // }
+  // else if ($oddArr[3] -6 === $oddArr[4] && $oddArr[4] -6 === $oddArr[5] && $oddArr[5] - 6 === $oddArr[6]){
+  //   console.log("win");
+  // }
+// }
 
 
 
@@ -119,9 +135,9 @@ for (let i=0; i < $oddArr.length; i++){
       $(event.currentTarget).append($icon1);
       $(event.currentTarget).addClass("Odd");
 
-      const $clickedOdd = $(event.currentTarget).attr("id");
-      console.log($(event.currentTarget));
-      console.log("clicked square num " + $clickedOdd);
+      // const $clickedOdd = $(event.currentTarget).attr("id");
+      // console.log($(event.currentTarget));
+      // console.log("clicked square num " + $clickedOdd);
 
 
       checkColumn();
@@ -134,10 +150,10 @@ for (let i=0; i < $oddArr.length; i++){
        $(event.currentTarget).append($icon2);
        $(event.currentTarget).addClass("Even");
 
-       const $clickedEven = $(event.currentTarget).attr("id");
-       console.log("clicked square num " + $clickedEven);
-       $evenArr.push($clickedEven);
-       console.log("square num " + $clickedEven + " in evenArr");
+       // const $clickedEven = $(event.currentTarget).attr("id");
+       // console.log("clicked square num " + $clickedEven);
+       // $evenArr.push($clickedEven);
+       // console.log("square num " + $clickedEven + " in evenArr");
 
        // checkColumn();
        // checkRow();
@@ -154,19 +170,15 @@ for (let i=0; i < $oddArr.length; i++){
         $square.addClass("square");
         $board.append($square);
 
-
         $square.one("click", placeIcon);
 
-
-        const makeSquareArr = () => {
-          $squareArr.push($square);
         }
 
-      };
+      });
 
 
 
-});
+
 //
 // const $column0 = [$("div#0"), $("div#6"), $("#div#12"), $("div#18"), $("div#24"), $("div#30"), $("div#36")];
 // const $column1 = [$("div#1"), $("div#7"), $("#div#13"), $("div#19"), $("div#25"), $("div#31"), $("div#37")];
