@@ -7,3 +7,5 @@ I attempted to determine icon placement based on the number of clicks on the sel
 
 Players should be able to take turns placing their icons - either Charlie Brown or Snoopy on their desired spot. 
 If a player succeeds in placing their icon in four adjacent spots vertically or horizontally, an alert will pop up announcing that they win the game!
+
+https://github.com/op9674a/op9674a.github.io/tree/master/game
