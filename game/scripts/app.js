@@ -3,7 +3,29 @@ $(() => {
 //check class, id and value of chosen spot
 const $oddArr = [];
 const $evenArr = [];
-  const checkColumn = () => {
+
+const checkRowOdd = () => {
+  if($oddArr[0] + 1 === $oddArr[1] && $oddArr[1] + 1 === $oddArr[2] && $oddArr[2] +1 === $oddArr[3]){
+  console.log("win");
+  }
+  else if($oddArr[0] - 1 === $oddArr[1] && $oddArr[1] - 1 === $oddArr[2] && $oddArr[2] -1 === $oddArr[3]){
+    console.log("win");
+  }
+  else if($oddArr[1] + 1 === $oddArr[2] && $oddArr[2] + 1 === $oddArr[3] && $oddArr[3] +1 === $oddArr[4]){
+    console.log("win");
+  }
+  else if ($oddArr[1] - 1 === $oddArr[2] && $oddArr[2] - 1 === $oddArr[3] && $oddArr[3] -1 === $oddArr[4]){
+    console.log("win");
+  }
+  else if($oddArr[2] + 1 === $oddArr[3] && $oddArr[3] + 1 === $oddArr[4] && $oddArr[4] +1 === $oddArr[5]){
+    console.log("win");
+  }
+  else if($oddArr[2] - 1 === $oddArr[3] && $oddArr[3] - 1 === $oddArr[4] && $oddArr[4] -1 === $oddArr[5]){
+    console.log("win");
+  }
+}
+
+  const checkColumnOdd = () => {
 //determine adjacent
 //determine if 4
 // if four adjacent spots have the same class announce win
@@ -31,31 +53,22 @@ console.log(parseInt($(event.currentTarget).attr("id")) + 18);
 $oddArr.push($oddInt);
 console.log($oddArr);
 
-const fourClicks = () => {
-for (let i=0; i <$oddArr.length; i++){
-// //   console.log($oddArr[0], $oddArr[1], $oddArr[2]);
-// console.log($oddArr[i] ++);
-console.log(i);
-if (i > 0 && i%3===0){
-  console.log("user clicked 4 times");
-}
-}
-};
 
-fourClicks();
-  // if($oddArr[i] - 6 === $oddArr[i] +=1 && $oddArr[i] - 6 === $oddArr[i] && $oddArr[i] -6 === $oddArr[i]){
-  //   console.log("win");
-  // }
-  // else if ($oddArr[1] - 6 === $oddArr[2] && $oddArr[2] - 6 === $oddArr[3] && $oddArr[3] - 6 === $oddArr[4]){
-  //   console.log("win");
-  // }
-  // else if ($oddArr[2] - 6 === $oddArr[3] && $oddArr[3] - 6 === $oddArr[4] && $oddArr[4] - 6 === $oddArr[5]){
-  //   console.log("win");
-  // }
-  // else if ($oddArr[3] -6 === $oddArr[4] && $oddArr[4] -6 === $oddArr[5] && $oddArr[5] - 6 === $oddArr[6]){
-  //   console.log("win");
-  // }
-// }
+
+
+  if($oddArr[0] - 6 === $oddArr[1] && $oddArr[1] - 6 === $oddArr[2] && $oddArr[2] -6 === $oddArr[3]){
+    alert("Win!")
+  }
+  else if ($oddArr[1] - 6 === $oddArr[2] && $oddArr[2] - 6 === $oddArr[3] && $oddArr[3] - 6 === $oddArr[4]){
+    console.log("win");
+  }
+  else if ($oddArr[2] - 6 === $oddArr[3] && $oddArr[3] - 6 === $oddArr[4] && $oddArr[4] - 6 === $oddArr[5]){
+    console.log("win");
+  }
+  else if ($oddArr[3] -6 === $oddArr[4] && $oddArr[4] -6 === $oddArr[5] && $oddArr[5] - 6 === $oddArr[6]){
+    console.log("win");
+  }
+
 
 
 
@@ -140,8 +153,8 @@ fourClicks();
       // console.log("clicked square num " + $clickedOdd);
 
 
-      checkColumn();
-      // checkRow();
+      checkColumnOdd();
+      checkRowOdd();
 
     }
 
