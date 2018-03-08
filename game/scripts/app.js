@@ -1052,11 +1052,12 @@ $("body").append($board);
     $square.one("click", placeIcon);
   };
 
-announceOddWin = () => {
+
+const announceOddWin = () => {
   alert("You're a good man, Charlie Brown! You placed a winning piece! Click to reveal!");
 };
 
-announceEvenWin = () => {
+const announceEvenWin = () => {
   alert("Nice moves, Snoopy! You placed a winning piece! Click to reveal!");
 };
 
