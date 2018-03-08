@@ -14,7 +14,7 @@ Players should be able to take turns placing their icons - Player 1 as Charlie B
 If a player succeeds in placing their icon in four adjacent spots vertically, horizontally, or diagonally in four consecutive turns in one direction,
 they win the game. For example, if Player 1 places their first icon at the bottom of a column, on their next play they must place their icon directly above the first, then directly above the second icon on their third play, then directly above their third icon on their fourth play.
 
-Additionally, if a player has three adjacent icons in column 1, places an icon in column 2, and then places an icon in column1 to make four in a row, that does NOT count as a win. The same applies for rows and diagonal lines.
+Additionally, if a player has three adjacent icons in column 1, places an icon in column 2, and then places an icon in column 1 to make four in a row, that does NOT count as a win. The same applies for rows and diagonal lines.
 
 Unresolved Issues:
 
