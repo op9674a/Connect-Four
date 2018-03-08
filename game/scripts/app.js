@@ -1057,6 +1057,10 @@ const announceOddWin = () => {
   alert("You're a good man, Charlie Brown! You placed a winning piece! Click to reveal!");
 };
 
+const $playAgain = $(".playAgain");
+	$("#playAgain").click(function(){document.location.reload(true);
+	});
+
 const announceEvenWin = () => {
   alert("Nice moves, Snoopy! You placed a winning piece! Click to reveal!");
 };
