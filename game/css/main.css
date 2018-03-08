@@ -18,21 +18,30 @@ background-size: cover;
   border-style: 5px inset;
 }
 
-#h1 {
-margin-top: 65px;
+#h1{
+margin-top: 55px;
 color: ivory;
 text-align: center;
 font-family: 'Fredoka One';
-font-size: 30px;
+font-size: 25px;
 text-shadow: -3px 0 black, 0 3px black, 3px 0 black, 0 -3px black;
 /* 0 5px black, 5px 0 black, 0 -5px black; */
+}
+
+#h3{
+  color: ivory;
+  text-align: center;
+  font-family: 'Fredoka One';
+  font-size: 20px;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+  border-bottom: 2px solid black;
 }
 
 #p {
   color: ivory;
   text-align: center;
   font-family: 'Fredoka One';
-  font-size: 30px;
+  font-size: 25px;
   text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
 
@@ -41,9 +50,12 @@ text-shadow: -3px 0 black, 0 3px black, 3px 0 black, 0 -3px black;
   border-style: hidden;
   color: ivory;
   font-family: 'Fredoka One';
-  font-size: 50px;
+  font-size: 25px;
   text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+  border-top: 5px solid black;
+  border-bottom: 5px solid black;
 }
+
 .square {
   height: 50px;
   width: 50px;
