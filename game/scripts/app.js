@@ -3,6 +3,8 @@ $(() => {
 
 const $oddArr = [];
 const $evenArr = [];
+
+
 //PLAYER 1
 const checkColumnOdd = () => {
 
@@ -1022,6 +1024,7 @@ $icon2.addClass("O");
     checkRowOdd();
     diagOddLeft();
     diagOddRight();
+
   }
   else if (clicks %2 === 0) {
 
