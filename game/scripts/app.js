@@ -507,6 +507,9 @@ const diagOddRight = () => {
 // //PLAYER TWO
 const checkColumnEven = () => {
 
+  const $evenInt = parseInt($(event.currentTarget).attr("id"));
+  $evenArr.push($evenInt);
+
   if($evenArr[0] -6 === $evenArr[1] && $evenArr[1] -6 === $evenArr[2] && $evenArr[2] -6 === $evenArr[3]){
     announceEvenWin();
   }
