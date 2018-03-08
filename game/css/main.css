@@ -51,7 +51,7 @@ text-shadow: -3px 0 black, 0 3px black, 3px 0 black, 0 -3px black;
  .square:hover {transform: scale(1.1);
 }
 
-.X{
+.CharlieBrown{
   background-image: url(http://icons.iconarchive.com/icons/pino/peanuts/32/Charly-Brown-3-icon.png);
   background-size: contain;
   text-align: center;
@@ -70,7 +70,7 @@ text-shadow: -3px 0 black, 0 3px black, 3px 0 black, 0 -3px black;
   padding: 0;
 }
 
-.O {
+.Snoopy {
   background-image: url(http://icons.iconarchive.com/icons/pino/peanuts/32/Snoopy-2-icon.png);
   background-size: contain;
   text-align: center;
@@ -80,7 +80,7 @@ text-shadow: -3px 0 black, 0 3px black, 3px 0 black, 0 -3px black;
   margin-left: auto;
   background-color: white;
   color: rgb(97, 107, 111);
-  border-radius: 26px;
+  border-radius: 25px;
   flex-grow: 1;
   vertical-align: middle;
   font-size: 55px;
@@ -88,26 +88,4 @@ text-shadow: -3px 0 black, 0 3px black, 3px 0 black, 0 -3px black;
   line-height: 50px;
   overflow: hidden;
   padding: 0;
-}
-
-.Odd {
-  height: 50px;
-  width: 50px;
-  border-radius: 25px;
-  border:2px solid black;
-  border-style:groove;
-  background-color: white;
-  line-height: 50px;
-  flex-grow: 1;
-}
-
-.Even{
-  height: 50px;
-  width: 50px;
-  border-radius: 25px;
-  border:2px solid black;
-  border-style:groove;
-  background-color: white;
-  line-height: 50px;
-  flex-grow: 1;
 }

@@ -489,19 +489,19 @@ const diagOddRight = () => {
     announceOddWin();
   }
   else if ($oddArr[17] -5 === $oddArr[18] && $oddArr[18] -5 === $oddArr[19] && $oddArr[19] -5 === $oddArr[20]){
-      announceOddWin();
+    announceOddWin();
   }
   else if ($oddArr[18] +5 === $oddArr[19] && $oddArr[19] +5 === $oddArr[20] && $oddArr[20] +5 === $oddArr[21]){
-      announceOddWin();
+    announceOddWin();
   }
   else if ($oddArr[18] -5 === $oddArr[19] && $oddArr[19] -5 === $oddArr[20] && $oddArr[20] -5 === $oddArr[21]){
-      announceOddWin();
+    announceOddWin();
   }
   else if ($oddArr[19] +5 === $oddArr[20] && $oddArr[20] +5 === $oddArr[21] && $oddArr[21] +5 === $oddArr[22]){
-      announceOddWin();
+    announceOddWin();
   }
   else if ($oddArr[19] -5 === $oddArr[20] && $oddArr[20] -5 === $oddArr[21] && $oddArr[21] -5 === $oddArr[22]){
-      announceOddWin();
+    announceOddWin();
   }
 };
 // //PLAYER TWO
@@ -1009,16 +1009,15 @@ const placeIcon = (event) => {
 clicks ++;
 
 const $icon1 = $("<div>");
-$icon1.addClass("X");
+$icon1.addClass("CharlieBrown");
 
 const $icon2 = $("<div>");
-$icon2.addClass("O");
+$icon2.addClass("Snoopy");
 
   if (clicks %2 !== 0) {
 
     $(event.currentTarget).empty();
     $(event.currentTarget).append($icon1);
-    $(event.currentTarget).addClass("Odd");
 
     checkColumnOdd();
     checkRowOdd();
@@ -1030,7 +1029,6 @@ $icon2.addClass("O");
 
     $(event.currentTarget).empty();
     $(event.currentTarget).append($icon2);
-    $(event.currentTarget).addClass("Even");
 
     checkColumnEven();
     checkRowEven();
