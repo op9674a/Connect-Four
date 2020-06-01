@@ -55,7 +55,7 @@ text-shadow: -3px 0 black, 0 3px black, 3px 0 black, 0 -3px black;
   margin-top: 20px;
 }
 
-.square {
+.spot {
   height: 50px;
   width: 50px;
   border-radius: 25px;
@@ -66,7 +66,7 @@ text-shadow: -3px 0 black, 0 3px black, 3px 0 black, 0 -3px black;
   transition: all .1s ease-in-out;
  }
 
- .square:hover {transform: scale(1.1);
+ .spot:hover {transform: scale(1.1);
 }
 
 .CharlieBrown{
