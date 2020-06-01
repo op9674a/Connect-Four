@@ -63,8 +63,30 @@ const checkColumnPlayer1 = () => {
   console.log("this is combo " + combo)
 
   //check if difference between each number is 6
+ let difference = [];
+  for (let i = 0; i < combo.length - 1; i++) {
+    const diff = (combo[i + 1]) - (combo[i]);
+    difference.push(diff);
+    console.log('this is diff' + diff);
+  }
+ 
+  console.log('this is difference ' + difference); 
+  console.log('this is length of difference' + difference.length);
+  //if length of difference is 3 then calculate
+  if (difference.length === 3){
+      //if yes announce win
+let result = difference.every((num) => {
+  return num == 6;
+})
+  
+console.log(result);
+console.log("WIN");
+  }
 
-  //if yes announce win
+ 
+
+
+
 
   //else
 
